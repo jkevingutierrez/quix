@@ -1,1 +1,63 @@
-/* You can add global styles to this file, and also import other style files */
+$wrong-background: #f8bbd0;
+$correct-background: #b2ebf2;
+$color-primary: #757575;
+$button-color: #fff;
+$checkbox-border-color: rgba(0, 0, 0, .54);
+
+@import '~normalize.css/normalize.css';
+@import '~milligram/src/milligram';
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+
+label {
+  font-weight: 300;
+}
+
+.container {
+  margin-bottom: 1em;
+  margin-top: 1em;
+
+  .button {
+    margin: .4em;
+  }
+
+  .button,
+  .mat-button,
+  .mat-button[disabled][disabled] {
+    color: $button-color;
+    font-weight: 300;
+  }
+
+  .result {
+    display: block;
+    margin: 1em;
+    min-width: 160px;
+    padding: 1em;
+
+    &.wrong {
+      background-color: $wrong-background;
+    }
+
+    &.correct {
+      background-color: $correct-background;
+    }
+  }
+
+  .mat-checkbox-frame {
+    border-color: $checkbox-border-color;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.mat-checkbox[disabled][disabled],
+input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}

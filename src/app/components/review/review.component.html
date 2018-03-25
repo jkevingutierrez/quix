@@ -1,0 +1,14 @@
+<div *ngIf="quiz">
+  <h2>Design Patterns</h2>
+  <h3>Quiz Result</h3>
+  <div>
+    <div *ngFor="let question of quiz.questions; let i = index">
+      <app-question  [question]="question" [index]="i + 1" [disabled]="true"></app-question>
+      <span class="result" [ngClass]="isAnswerCorrect(question) ? 'correct' : 'wrong'">
+        Your answer is {{ isAnswerCorrect(question) ? 'correct' : 'incorrect' }}.
+      </span>
+    </div>
+  </div>
+</div>
+<app-navigation [quiz]="quiz"></app-navigation>
+
