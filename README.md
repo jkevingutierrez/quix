@@ -1,4 +1,8 @@
+[![CircleCI](https://circleci.com/gh/jkevingutierrez/quix.svg?style=svg)](https://circleci.com/gh/jkevingutierrez/quix)
+
 # Quix
+
+SPA Quiz. The Quiz consists of twenty, multiple choice questions, each with four possible answers
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
