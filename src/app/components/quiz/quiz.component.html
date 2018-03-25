@@ -1,0 +1,13 @@
+<div *ngIf="quiz">
+  <div class="quiz-header">
+    <span class="quiz-header--text">Question {{ currentQuestionNumber + 1 }} of {{ quiz.questions.length }}.</span>
+  </div>
+  <app-question [question]="quiz.questions[currentQuestionNumber]" [index]="currentQuestionNumber + 1"></app-question>
+  <div class="quiz-buttons-container">
+    <button class="button" mat-button (click)="goToFirstQuestion()" [disabled]="isInFirstQuestion()" >First</button>
+    <button class="button" mat-button (click)="goToPrevQuestion()" [disabled]="isInFirstQuestion()">Prev</button>
+    <button class="button" mat-button (click)="goToNextQuestion()" [disabled]="isInLastQuestion()">Next</button>
+    <button class="button" mat-button (click)="goToLastQuestion()" [disabled]="isInLastQuestion()">Last</button>
+  </div>
+</div>
+<app-navigation [quiz]="quiz"></app-navigation>
