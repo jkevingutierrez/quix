@@ -1,0 +1,16 @@
+$quiz-header-background: #00b8d4;
+$quiz-header-color: #fff;
+
+.quiz-header {
+  margin-bottom: .6em;
+
+  &--text {
+    background-color: $quiz-header-background;
+    color: $quiz-header-color;
+    padding: .2em;
+  }
+}
+
+.quiz-buttons-container {
+  text-align: center;
+}

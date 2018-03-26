@@ -1,0 +1,6 @@
+<div *ngIf="question">
+  <p>{{ index }}. {{ question.text }}:</p>
+  <div class="checkbox-container">
+    <mat-checkbox *ngFor="let option of question.options" [(ngModel)]="option.selected" [disabled]="disabled">{{ option.text }}</mat-checkbox>
+  </div>
+</div>

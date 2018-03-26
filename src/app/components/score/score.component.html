@@ -1,0 +1,11 @@
+<div *ngIf="quiz">
+  <h2>{{ quiz.name }}</h2>
+  <div class="review-container">
+    <div *ngFor="let question of quiz.questions; let i = index" class="question-reviewed">
+      <span class="result text-center" [ngClass]="isAnswerCorrect(question) ? 'correct' : 'wrong'">
+        {{ i + 1 }}. {{ isAnswerCorrect(question) ? 'Answered' : 'Not Answered' }}
+      </span>
+    </div>
+  </div>
+</div>
+<app-navigation [quiz]="quiz"></app-navigation>
