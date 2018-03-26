@@ -6,6 +6,10 @@
 
 SPA Quiz. The Quiz consists of twenty, multiple choice questions, each with four possible answers
 
+## Data Config
+
+You can modify the quiz Q&A, You just need to edit the files [`src/app/mocks/mock-questions.ts`](./src/app/mocks/mock-questions.ts) and [`src/app/mocks/mock-quiz.ts`](./src/app/mocks/mock-questions.ts) with your data.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
 ## Development server
