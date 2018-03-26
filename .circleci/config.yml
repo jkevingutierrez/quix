@@ -58,6 +58,6 @@ jobs:
                 name: Deploy on GitHub Pages
                 command: |
                   if [ "${CIRCLE_BRANCH}" == "master" ]; then
-                    ./scripts/deploy-ghpages.sh build
+                    ./scripts/deploy-ghpages.sh dist
                   fi
 
