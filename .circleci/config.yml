@@ -12,6 +12,12 @@ jobs:
             - run:
                 name: Show current branch
                 command: echo ${CIRCLE_BRANCH}
+            - run:
+                name: Show current path
+                command: pwd
+            - run:
+                name: Show current folder content
+                command: ls
             # Restore local dependencies from cache
             - restore_cache:
                 keys:
@@ -49,6 +55,7 @@ jobs:
                     - dist
             # Deploy project
             - deploy:
+                name: Deploy on GitHub Pages
                 command: |
                   if [ "${CIRCLE_BRANCH}" == "master" ]; then
                     ./scripts/deploy-ghpages.sh build
