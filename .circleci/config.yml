@@ -47,3 +47,10 @@ jobs:
                 key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
                 paths:
                     - dist
+            # Deploy project
+            - deploy:
+                command: |
+                  if [ "${CIRCLE_BRANCH}" == "master" ]; then
+                    ansible-playbook site.yml
+                  fi
+
