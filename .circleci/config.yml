@@ -51,6 +51,6 @@ jobs:
             - deploy:
                 command: |
                   if [ "${CIRCLE_BRANCH}" == "master" ]; then
-                    ansible-playbook site.yml
+                    ./scripts/deploy-ghpages.sh build
                   fi
 
