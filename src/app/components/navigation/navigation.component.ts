@@ -19,12 +19,12 @@ export class NavigationComponent implements OnInit {
   }
 
   reloadQuiz() {
-    if (this.router.url === '/quiz') {
+    if (this.router.url === '/') {
       this.router.navigateByUrl('/dummy', { skipLocationChange: true });
-      setTimeout(_ => this.goTo('/quiz'));
+      setTimeout(_ => this.goTo('/'));
     } else {
       this.quizService.initQuiz().subscribe(quiz => {
-        this.goTo('/quiz');
+        this.goTo('/');
       });
     }
   }

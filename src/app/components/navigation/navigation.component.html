@@ -1,5 +1,5 @@
 <div class="navigation-buttons">
-  <a routerLink="/quiz" routerLinkActive="active"><button class="button" mat-button (click)="reloadQuiz()" >Quiz</button></a>
+  <a routerLink="/" routerLinkActive="active"><button class="button" mat-button (click)="reloadQuiz()" >Quiz</button></a>
   <a routerLink="/review" routerLinkActive="active" [class.disabled]="!isInScorePage()"><button class="button" mat-button [disabled]="!isInScorePage()">Review</button></a>
   <button class="button" mat-button (click)="submitQuiz()" [disabled]="isInScorePage() || isInReviewPage()">Submit Quiz</button>
 </div>

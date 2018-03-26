@@ -24,7 +24,7 @@ export class QuizComponent implements OnInit {
   }
 
   initQuiz() {
-    if (this.router.url === '/quiz') {
+    if (this.router.url === '/') {
       this.quizService.initQuiz()
         .mergeMap(_ => this.quizService.getQuiz())
         .subscribe(quiz => this.quiz = quiz);
