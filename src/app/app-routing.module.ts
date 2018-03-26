@@ -7,8 +7,7 @@ import { ReviewComponent } from './components/review/review.component';
 import { DummyComponent } from './components/dummy/dummy.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/quiz', pathMatch: 'full' },
-  { path: 'quiz', component: QuizComponent },
+  { path: '', component: QuizComponent, pathMatch: 'full' },
   { path: 'score', component: ScoreComponent },
   { path: 'review', component: ReviewComponent },
   { path: 'dummy', component: DummyComponent },
