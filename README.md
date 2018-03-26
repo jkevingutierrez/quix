@@ -8,8 +8,19 @@ SPA Quiz. The Quiz consists of twenty, multiple choice questions, each with four
 
 ## Data Config
 
-You can modify the quiz Q&A, You just need to edit the files [`src/app/mocks/mock-questions.ts`](./src/app/mocks/mock-questions.ts) and [`src/app/mocks/mock-quiz.ts`](./src/app/mocks/mock-questions.ts) with your data.
+You can modify the quiz Q&A, You just need to edit the files [`src/app/mocks/mock-questions.ts`](./src/app/mocks/mock-questions.ts) and [`src/app/mocks/mock-quiz.ts`](./src/app/mocks/mock-quiz.ts) with your data.
 
+## Requirements 
+To run the project, you need to have installed node.
+
+The project was tested using: 
+
+- node 8.10.0
+- npm 5.8.0
+- chrome 65
+- firefox 59
+
+run `npm install` in the folder directory.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 

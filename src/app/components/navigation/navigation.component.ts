@@ -30,6 +30,7 @@ export class NavigationComponent implements OnInit {
   }
 
   submitQuiz() {
+    this.quiz.hasBeenReviewed = true;
     this.quizService.updateQuiz(this.quiz)
      .subscribe(_ => { this.goTo('/score'); });
   }
